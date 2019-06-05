@@ -1,0 +1,101 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f88;
+	margin: 0;
+	padding: 0;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2rem;
+	color: #eee;
+	margin-top: -.5rem;
+}
+
+.holder {
+	padding: 3rem 5rem;
+	background-color: #ccf;
+	border-radius: 15%;
+	animation: centerHolder 1s ease-out;
+}
+
+@keyframes centerHolder {
+	0% {
+		transform: translate(60vw);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+.loadingContainer {
+	height: 5rem;
+	width: 5rem;
+	position: relative;
+	margin: auto;
+	animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
+
+
+.loading {
+	height: 2rem;
+	width: 2rem;
+	border-radius: 20%;
+	background-color: #d66;
+	position: absolute;
+	animation: backgroundColor 8s ease infinite;
+}
+
+.loading:nth-child(1) {
+	top: 10%;
+	left: 10%;
+}
+
+.loading:nth-child(2) {
+    animation-delay: 1s;
+    background: #d66;
+    right: 10%;
+    top: 10%;
+}
+
+.loading:nth-child(3) {
+    animation-delay: 3s;
+    background: #d66;
+	bottom: 10%;
+	left: 10%
+}
+
+.loading:nth-child(4) {
+    animation-delay: 2s;
+    background: #d66;
+    bottom: 10%;
+    right: 10%;
+}
+
+@keyframes backgroundColor {
+    50% {
+		background-color: #66d;
+    }
+}
